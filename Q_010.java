@@ -1,24 +1,23 @@
 import java.util.Scanner;
 
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-
-
 public class Q_010 {
 
 	public static void main(String []args){
 		
 		Scanner leitor = new Scanner(System.in);
 		
-		System.out.print("Digite � altura:");
+		System.out.print("Digite à altura:");
 		double h = leitor.nextDouble();
 		
-		String[] options = {"Femenino", "Masculino"};
-        ImageIcon icon = new ImageIcon("src/images/turtle32.png");
-        String n = (String)JOptionPane.showInputDialog(null, "Qual seu sexo?", 
-                "POO", JOptionPane.QUESTION_MESSAGE, icon, options, null);
-        System.out.println(n);
+		System.out.println("1 - Masculino"
+				+ " 2 - Feminino");
+		int opções = leitor.nextInt();
 		
+		if(opções == 1) {
+			System.out.println((72.7*h)-58);
+		}else if(opções == 2) {
+			System.out.println((62.1*h)-44.7);
+		}
 		
 		leitor.close();
 	}
